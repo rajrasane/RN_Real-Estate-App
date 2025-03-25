@@ -31,7 +31,7 @@ export const GlobalProvider = ({children} : {children : ReactNode}) => {
 
     const isLoggedIn = !!user;
 
-    console.log(JSON.stringify(user,null,2));
+    // console.log(JSON.stringify(user,null,2));
 
     return (
         <GlobalContext.Provider value={{
@@ -45,7 +45,7 @@ export const GlobalProvider = ({children} : {children : ReactNode}) => {
     )
 }
 
-const useGlobalContext = () => {
+export const useGlobalContext = () => {
     const context = useContext(GlobalContext);
     if(!context) throw new Error('useGlobalContext must be used within a GlobalProvider');
     return context;
