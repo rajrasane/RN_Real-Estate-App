@@ -2,7 +2,6 @@ import { View, Text, ScrollView , Image, TouchableOpacity, ImageSourcePropType, 
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import icons from '@/constants/icons'
-import images from '@/constants/images'
 import { settings } from '@/constants/data'
 import { useGlobalContext } from '@/lib/global-provider'
 import { logout } from '@/lib/appwrite'
@@ -44,21 +43,23 @@ const Profile = () => {
   return (
     <SafeAreaView className='bg-white h-full'>
       <ScrollView
-        contentContainerClassName='pb-32 px-7'
+        contentContainerClassName='pb-32 px-5'
         showsVerticalScrollIndicator={false}
       >
         <View className='flex-row justify-between items-center mt-5'>
-          <Text className='text-xl font-rubik-bold'>Profile</Text>
-          <Image source={icons.bell} className='size-5'/>
+          <Text className='text-2xl font-rubik-bold'>Profile</Text>
+          <TouchableOpacity className="size-11 bg-primary-200 rounded-full items-center justify-center mt-[2.2px]">
+            <Image source={icons.bell} className="size-5"/>
+          </TouchableOpacity>
         </View>
 
-        <View className='flex-row justify-center flex mt-5'>
+        <View className='flex-row justify-center flex mt-2'>
           <View className='flex-col flex items-center relative mt-5'>
-            <Image source={{uri : user?.avatar}} className='size-44 relative rounded-full'/>
-              <TouchableOpacity className='absolute bottom-11 right-2'>
-                <Image source={icons.edit} className='size-9'/>
+            <Image source={{uri : user?.avatar}} className='size-40 relative rounded-full'/>
+              <TouchableOpacity className='absolute bottom-11 right-[1.2]'>
+                <Image source={icons.edit} className='size-[28px]'/>
               </TouchableOpacity>
-              <Text className='text-2xl font-rubik-bold mt-2'>{user?.name}</Text>
+              <Text className='text-xl font-rubik-bold mt-2'>{user?.name}</Text>
           </View>
         </View>
 
