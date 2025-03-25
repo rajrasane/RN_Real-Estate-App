@@ -37,23 +37,19 @@ export default function Index() {
 
   const getGreeting = () => {
     try {
-      // Get current date
-      const now = new Date();
+      // Simple approach using local device time directly
+      const hours = new Date().getHours();
       
-      // Calculate local hour with timezone adjustment
-      const utcHour = now.getUTCHours();
-      const timezoneOffset = now.getTimezoneOffset() / 60;
-      const hour = (24 + utcHour - timezoneOffset) % 24;
-      
-      // Return appropriate greeting based on time
-      if (hour >= 0 && hour < 12) {
+      // Return greeting based on local time
+      if (hours >= 5 && hours < 12) {
         return "Good Morning";
-      } else if (hour >= 12 && hour < 17) {
+      } else if (hours >= 12 && hours < 18) {
         return "Good Afternoon";
       } else {
         return "Good Evening";
       }
     } catch (error) {
+      console.error("Error getting greeting:", error);
       return "Hello"; // Fallback greeting
     }
   };

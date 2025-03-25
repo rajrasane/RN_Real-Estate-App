@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "React-Native-Restate",
-    "slug": "React-Native-Restate",
+    "name": "ReState",
+    "slug": "ReState",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/icon.png", 
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
