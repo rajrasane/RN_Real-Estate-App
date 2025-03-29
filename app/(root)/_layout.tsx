@@ -9,7 +9,7 @@ export default function AppLayout(){
     if(loading){
         return(
             <SafeAreaView className='bg-white h-full flex items-center justify-center'>
-                <ActivityIndicator size='large' className='text-primary-300' />
+                <ActivityIndicator size='large' className='text-black-300' />
             </SafeAreaView>
         )
     }
